@@ -4,8 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.neural_network import MLPClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
 
 # 1. Cargar y dividir los datos
@@ -18,10 +18,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # 2. Definir los algoritmos
 modelos = {
     "RandomForest": RandomForestClassifier(n_estimators=100, random_state=42, class_weight='balanced'),
+    "Arbol_Decision": DecisionTreeClassifier(random_state=42, class_weight='balanced'),
+    "Naive_Bayes": GaussianNB(),
     "SVM_Lineal": SVC(kernel='linear'),
-    "KNN": KNeighborsClassifier(n_neighbors=5),
-    "Regresion_Logistica": LogisticRegression(max_iter=1000),
-    "Red_Neuronal": MLPClassifier(hidden_layer_sizes=(100,), max_iter=500, random_state=42)
+    "KNN": KNeighborsClassifier(n_neighbors=5)
 }
 
 # 3. Entrenar y exportar cada modelo
