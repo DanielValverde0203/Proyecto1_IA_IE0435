@@ -29,13 +29,13 @@ Se dividió el dataset consolidado utilizando un muestreo estratificado: 80% par
 
 | Algoritmo | Exactitud (Accuracy) |
 | :--- | :---: |
-| **Random Forest** (Ganador) | 70.8% |
-| **Regresión Logística** (Empate) | 70.8% |
+| **Random Forest** | 70.8% |
+| **Regresión Logística** | 70.7% |
 | **SVM Lineal** | 62.5% |
 | **K-Nearest Neighbors (KNN)** | 62.5% |
 | **Red Neuronal (MLP)** | 54.2% |
 
-**Análisis de Selección:** Tras evaluar los modelos, **Random Forest** y la **Regresión Logística** obtuvieron el mejor rendimiento general con una exactitud del 70.8%. Se seleccionó Random Forest como el algoritmo definitivo para exportar, ya que los modelos basados en árboles (ensambles) suelen manejar mejor la alta varianza y el ruido introducido por las severas diferencias de escala y encuadre en las imágenes aportadas por los distintos integrantes. El rendimiento moderado general demuestra que, para trabajos futuros, se debe establecer un protocolo físico de captura fotográfica más estricto.
+**Análisis de Selección:** Tras evaluar los modelos, **Random Forest** obtuvo el mejor rendimiento general con una exactitud del 70.8%. Se seleccionó este como el algoritmo definitivo para exportar, ya que los modelos basados en árboles (ensambles) suelen manejar mejor la alta varianza y el ruido introducido por las severas diferencias de escala y encuadre en las imágenes aportadas por los distintos integrantes. El rendimiento moderado general demuestra que, para trabajos futuros, se debe establecer un protocolo físico de captura fotográfica más estricto.
 
 ---
 
